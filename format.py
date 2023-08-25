@@ -18,9 +18,9 @@ def create_centerline(city):
     df = df.drop(columns=[" w_tr_right_m", ' w_tr_left_m'], axis=1)
     df['z_m'] = 0
     
-    df = df.iloc[::2, :]
+    df = df.iloc[::3, :]
 
-    df.to_csv(f'./{city}/center_line_half.csv', index=False, header=False)
+    df.to_csv(f'./{city}/center_line_third.csv', index=False, header=False)
     print(df)
     
 directories = os.listdir('./')
